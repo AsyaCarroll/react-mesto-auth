@@ -1,0 +1,25 @@
+.header {
+    min-width: 880px;
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 41px;
+    border-bottom: 1px solid rgba(84, 84, 84, .7);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding: 45px 30px 32px 30px;
+        min-width: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 28px 27px 32px 27px;
+    }
+}
