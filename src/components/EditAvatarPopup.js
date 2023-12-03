@@ -21,10 +21,16 @@ function EditAvatarProfile(props) {
             isOpen={props.isOpen}
             onClose={props.onClose}
             onSubmit={handleSubmit}>
-            <>
-                <input type="url" name="avatar" ref={input} placeholder="Ссылка" required="" className="popup__input popup__input_type_link" id="avatar-input" />
-                <span className="popup__input-error avatar-input-error" />
-            </>
+            <input
+                type="url"
+                name="avatar"
+                ref={input}
+                placeholder="Ссылка"
+                required=""
+                className="popup__input popup__input_type_link"
+                id="avatar-input"
+            />
+            <span className="popup__input-error avatar-input-error" />
         </PopupWithForm>
     )
 }

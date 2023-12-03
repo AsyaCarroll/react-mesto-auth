@@ -32,30 +32,28 @@ function AddPlacePopup(props) {
             onClose={props.onClose}
             onSubmit={handleSubmit}
             onAddPlace={props.onAddPlace}>
-            <>
-                <input
-                    type="text"
-                    name="name"
-                    value={values.name || ''}
-                    onChange={handleChange}
-                    placeholder="Название"
-                    required=""
-                    minLength={2}
-                    maxLength={30}
-                    className="popup__input popup__input_type_pic-name"
-                    id="place-input" />
-                <span className="popup__input-error place-input-error" />
-                <input
-                    type="url"
-                    name="link"
-                    value={values.link || ''}
-                    onChange={handleChange}
-                    placeholder="Ссылка на картинку"
-                    required=""
-                    className="popup__input popup__input_type_link"
-                    id="link-input" />
-                <span className="popup__input-error link-input-error" />
-            </>
+            <input
+                type="text"
+                name="name"
+                value={values.name || ''}
+                onChange={handleChange}
+                placeholder="Название"
+                required=""
+                minLength={2}
+                maxLength={30}
+                className="popup__input popup__input_type_pic-name"
+                id="place-input" />
+            <span className="popup__input-error place-input-error" />
+            <input
+                type="url"
+                name="link"
+                value={values.link || ''}
+                onChange={handleChange}
+                placeholder="Ссылка на картинку"
+                required=""
+                className="popup__input popup__input_type_link"
+                id="link-input" />
+            <span className="popup__input-error link-input-error" />
         </PopupWithForm>
     )
 }

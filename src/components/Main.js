@@ -36,18 +36,18 @@ function Main(props) {
                         className="profile__add-button"
                         onClick={props.onAddPlace} />
                 </section>
+                <section className="elements" aria-label="фотографии">
+                    {props.cards.map((card) => (
+                        <Card
+                            key={card._id}
+                            card={card}
+                            onCardClick={props.onCardClick}
+                            onCardLike={props.onCardLike}
+                            onCardDelete={props.onCardDelete}
+                        />
+                    ))}
+                </section>
             </main>
-            <section className="elements" aria-label="фотографии">
-                {props.cards.map((card) => (
-                    <Card
-                        key={card._id}
-                        card={card}
-                        onCardClick={props.onCardClick}
-                        onCardLike={props.onCardLike}
-                        onCardDelete={props.onCardDelete}
-                    />
-                ))}
-            </section>
         </>
     );
 }

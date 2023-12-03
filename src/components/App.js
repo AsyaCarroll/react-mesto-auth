@@ -15,7 +15,7 @@ import ProtectedRouteElement from "./ProtectedRoute";
 import Login from "./Login";
 import Register from "./Register";
 import InfoTooltip from "./InfoTooltip";
-import * as sign from '../sign.js';
+import * as sign from '../utils/sign.js';
 import imgSuccess from '../images/success.svg';
 import imgFail from '../images/fail.svg';
 import { useForm } from "../hooks/useForm";
@@ -69,6 +69,7 @@ function App() {
         .then(([currentUser, cards]) => {
           setCurrentUser(currentUser);
           setCards(cards);
+          tokenCheck();
         })
         .catch((error) => {
           console.log(error);
