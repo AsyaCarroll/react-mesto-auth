@@ -131,8 +131,8 @@ function App() {
     setSelectedCard({});
   }
 
-  function handleUpdateUser(name, about) {
-    api.setUserInfo(name, about)
+  function handleUpdateUser(data) {
+    api.setUserInfo(data)
       .then((res) => {
         setCurrentUser(res);
         closeAllPopups();
@@ -153,8 +153,8 @@ function App() {
       })
   }
 
-  function handleAddPlaceSubmit(name, link) {
-    api.addCard(name, link)
+  function handleAddPlaceSubmit(data) {
+    api.addCard(data)
       .then((newCard) => {
         setCards([newCard, ...cards]);
         closeAllPopups();

@@ -20,14 +20,14 @@ class Api {
             .then(res => this._getResponseData(res))
     }
 
-    addCard(name, link) {
+    addCard(data) {
         return fetch(`${this.url}/cards`, {
             method: 'POST',
             headers: {
                 authorization: `${this.token}`,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({name, link})
+            body: JSON.stringify(data)
         })
             .then(res => this._getResponseData(res))
     }
@@ -51,7 +51,7 @@ class Api {
             .then(res => this._getResponseData(res))
     }
 
-    setUserInfo(newName, newDesc) {
+    setUserInfo(data) {
         return fetch(`${this.url}/users/me`, {
             method: 'PATCH',
             headers: {
@@ -59,8 +59,8 @@ class Api {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name: newName,
-                about: newDesc,
+                name: data.name,
+                about: data.description,
             })
         })
             .then(res => this._getResponseData(res))

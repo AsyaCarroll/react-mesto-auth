@@ -8,8 +8,8 @@ function AddPlacePopup(props) {
         link: ''
     });
 
-    function handleSubmit(e) {
-        e.preventDefault();
+    function handleSubmit(evt) {
+        evt.preventDefault();
         props.onAddPlace({
             name: values.name,
             link: values.link
